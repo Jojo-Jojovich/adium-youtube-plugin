@@ -216,7 +216,7 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADIUM = "$(HOME)/Projects/adium-1.3.3";
+				ADIUM = "$(HOME)/projects/adium";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -229,7 +229,7 @@
 				GCC_PREFIX_HEADER = "${PRODUCT_NAME}_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-undefined",
@@ -237,6 +237,7 @@
 				);
 				PRODUCT_NAME = "YouTube Plugin";
 				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Debug;
@@ -244,7 +245,7 @@
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADIUM = "$(HOME)/Projects/adium-1.3.3";
+				ADIUM = "$(HOME)/projects/adium";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -254,7 +255,7 @@
 				GCC_PREFIX_HEADER = "${PRODUCT_NAME}_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-undefined",
@@ -262,6 +263,7 @@
 				);
 				PRODUCT_NAME = "YouTube Plugin";
 				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Release;

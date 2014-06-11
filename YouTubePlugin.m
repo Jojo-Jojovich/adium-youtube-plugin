@@ -100,8 +100,14 @@
 {
     NSArray *_youtubeUrls = @[@"href=\"http://www.youtube.com/watch?v=",
                               @"href=\"https://www.youtube.com/watch?v=",
+                              @"href=\"http://youtube.com/watch?v=",
+                              @"href=\"https://youtube.com/watch?v=",
                               @"href=\"http://youtu.be/",
-                              @"href=\"https://youtu.be/"];
+                              @"href=\"https://youtu.be/",
+                              @"href=\"http://www.youtube.com/v/",
+                              @"href=\"https://www.youtube.com/v/",
+                              @"href=\"http://youtube.com/v/",
+                              @"href=\"https://youtube.com/v/"];
     return _youtubeUrls;
 }
 
