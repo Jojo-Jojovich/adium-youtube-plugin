@@ -140,6 +140,108 @@
 			[block release];
 			[thumbs release];
 		}
+        scanner = [[NSScanner alloc] initWithString:inHTMLString];
+        [scanner scanUpToString:@"href=\"https://www.youtube.com/watch?v=" intoString:NULL];
+		if (![scanner isAtEnd]) {
+			NSMutableString *block = [[NSMutableString alloc] initWithString:blockHTML];
+			NSMutableString *thumbs = [[NSMutableString alloc] init];
+			NSUInteger thumbsPos;
+			do  {
+				if ([scanner scanString:@"href=\"https://www.youtube.com/watch?v=" intoString:NULL] &&
+					[scanner scanCharactersFromSet:videoIdChars intoString:&videoId]) {
+					thumbsPos = [thumbs length];
+					[thumbs appendString:ytThumbHTML];
+					[thumbs replaceOccurrencesOfString:@"{%blockId%}" withString:[NSString stringWithFormat:@"%lu", blockId]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%videoId%}" withString:videoId
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%border%}" withString:[NSString stringWithFormat:@"%lu", border]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%width%}" withString:[NSString stringWithFormat:@"%lu", width]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%height%}" withString:[NSString stringWithFormat:@"%lu", height]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%thumbId%}" withString:[NSString stringWithFormat:@"%lu", thumbId]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					++thumbId;
+				}
+			} while ([scanner scanUpToString:@"href=\"https://www.youtube.com/watch?v=" intoString:NULL]);
+			[block replaceOccurrencesOfString:@"{%thumbs%}" withString:thumbs options:NSLiteralSearch range:NSMakeRange(0, [block length])];
+			[block replaceOccurrencesOfString:@"{%blockId%}" withString:[NSString stringWithFormat:@"%lu", blockId]
+									  options:NSLiteralSearch range:NSMakeRange(0, [block length])];
+			[newMessage appendString:block];
+			++blockId;
+			[block release];
+			[thumbs release];
+		}
+        scanner = [[NSScanner alloc] initWithString:inHTMLString];
+        [scanner scanUpToString:@"href=\"http://youtu.be/" intoString:NULL];
+		if (![scanner isAtEnd]) {
+			NSMutableString *block = [[NSMutableString alloc] initWithString:blockHTML];
+			NSMutableString *thumbs = [[NSMutableString alloc] init];
+			NSUInteger thumbsPos;
+			do  {
+				if ([scanner scanString:@"href=\"http://youtu.be/" intoString:NULL] &&
+					[scanner scanCharactersFromSet:videoIdChars intoString:&videoId]) {
+					thumbsPos = [thumbs length];
+					[thumbs appendString:ytThumbHTML];
+					[thumbs replaceOccurrencesOfString:@"{%blockId%}" withString:[NSString stringWithFormat:@"%lu", blockId]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%videoId%}" withString:videoId
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%border%}" withString:[NSString stringWithFormat:@"%lu", border]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%width%}" withString:[NSString stringWithFormat:@"%lu", width]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%height%}" withString:[NSString stringWithFormat:@"%lu", height]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%thumbId%}" withString:[NSString stringWithFormat:@"%lu", thumbId]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					++thumbId;
+				}
+			} while ([scanner scanUpToString:@"href=\"http://youtu.be/" intoString:NULL]);
+			[block replaceOccurrencesOfString:@"{%thumbs%}" withString:thumbs options:NSLiteralSearch range:NSMakeRange(0, [block length])];
+			[block replaceOccurrencesOfString:@"{%blockId%}" withString:[NSString stringWithFormat:@"%lu", blockId]
+									  options:NSLiteralSearch range:NSMakeRange(0, [block length])];
+			[newMessage appendString:block];
+			++blockId;
+			[block release];
+			[thumbs release];
+		}
+        scanner = [[NSScanner alloc] initWithString:inHTMLString];
+        [scanner scanUpToString:@"href=\"https://youtu.be/" intoString:NULL];
+		if (![scanner isAtEnd]) {
+			NSMutableString *block = [[NSMutableString alloc] initWithString:blockHTML];
+			NSMutableString *thumbs = [[NSMutableString alloc] init];
+			NSUInteger thumbsPos;
+			do  {
+				if ([scanner scanString:@"href=\"https://youtu.be/" intoString:NULL] &&
+					[scanner scanCharactersFromSet:videoIdChars intoString:&videoId]) {
+					thumbsPos = [thumbs length];
+					[thumbs appendString:ytThumbHTML];
+					[thumbs replaceOccurrencesOfString:@"{%blockId%}" withString:[NSString stringWithFormat:@"%lu", blockId]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%videoId%}" withString:videoId
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%border%}" withString:[NSString stringWithFormat:@"%lu", border]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%width%}" withString:[NSString stringWithFormat:@"%lu", width]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%height%}" withString:[NSString stringWithFormat:@"%lu", height]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					[thumbs replaceOccurrencesOfString:@"{%thumbId%}" withString:[NSString stringWithFormat:@"%lu", thumbId]
+											   options:NSLiteralSearch range:NSMakeRange(thumbsPos, [thumbs length] - thumbsPos)];
+					++thumbId;
+				}
+			} while ([scanner scanUpToString:@"href=\"https://youtu.be/" intoString:NULL]);
+			[block replaceOccurrencesOfString:@"{%thumbs%}" withString:thumbs options:NSLiteralSearch range:NSMakeRange(0, [block length])];
+			[block replaceOccurrencesOfString:@"{%blockId%}" withString:[NSString stringWithFormat:@"%lu", blockId]
+									  options:NSLiteralSearch range:NSMakeRange(0, [block length])];
+			[newMessage appendString:block];
+			++blockId;
+			[block release];
+			[thumbs release];
+		}
 		[scanner release];
 		return newMessage;
 	} else {

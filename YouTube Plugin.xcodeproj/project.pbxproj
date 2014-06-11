@@ -14,8 +14,8 @@
 		0CB8474B0FEE859600B309BD /* block.html in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8474A0FEE859600B309BD /* block.html */; };
 		0CB8474F0FEE877300B309BD /* youtube_thumb.html in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8474E0FEE877300B309BD /* youtube_thumb.html */; };
 		0CC8EC860FA0D7C1005D6C3D /* YouTubePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8EC850FA0D7C1005D6C3D /* YouTubePlugin.m */; };
-		8C8055041815C7D300B8D752 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8055031815C7D300B8D752 /* AIUtilities.framework */; };
-		8C8055061815C7DE00B8D752 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8055051815C7DE00B8D752 /* Adium.framework */; };
+		773F8DB31948EF5E003E6708 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F8DB11948EF5E003E6708 /* Adium.framework */; };
+		773F8DB41948EF5E003E6708 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F8DB21948EF5E003E6708 /* AIUtilities.framework */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +32,8 @@
 		0CC8EC840FA0D7C1005D6C3D /* YouTubePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubePlugin.h; sourceTree = "<group>"; };
 		0CC8EC850FA0D7C1005D6C3D /* YouTubePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubePlugin.m; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* YouTube Plugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YouTube Plugin_Prefix.pch"; sourceTree = "<group>"; };
-		8C8055031815C7D300B8D752 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
-		8C8055051815C7DE00B8D752 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		773F8DB11948EF5E003E6708 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		773F8DB21948EF5E003E6708 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8055041815C7D300B8D752 /* AIUtilities.framework in Frameworks */,
-				8C8055061815C7DE00B8D752 /* Adium.framework in Frameworks */,
+				773F8DB31948EF5E003E6708 /* Adium.framework in Frameworks */,
+				773F8DB41948EF5E003E6708 /* AIUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +53,8 @@
 		089C166AFE841209C02AAC07 /* YouTube Preview Plugin */ = {
 			isa = PBXGroup;
 			children = (
+				773F8DB11948EF5E003E6708 /* Adium.framework */,
+				773F8DB21948EF5E003E6708 /* AIUtilities.framework */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -104,8 +106,6 @@
 		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C8055031815C7D300B8D752 /* AIUtilities.framework */,
-				8C8055051815C7DE00B8D752 /* Adium.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -223,6 +223,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(ADIUM)/build/Deployment",
 					"/Users/larrybolt/Downloads/youtubeadium-code-11-trunk",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -254,6 +255,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(ADIUM)/build/Deployment",
 					"/Users/larrybolt/Downloads/youtubeadium-code-11-trunk",
+					"$(PROJECT_DIR)",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
