@@ -14,8 +14,8 @@
 		0CB8474B0FEE859600B309BD /* block.html in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8474A0FEE859600B309BD /* block.html */; };
 		0CB8474F0FEE877300B309BD /* youtube_thumb.html in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8474E0FEE877300B309BD /* youtube_thumb.html */; };
 		0CC8EC860FA0D7C1005D6C3D /* YouTubePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8EC850FA0D7C1005D6C3D /* YouTubePlugin.m */; };
-		773F8DB31948EF5E003E6708 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F8DB11948EF5E003E6708 /* Adium.framework */; };
-		773F8DB41948EF5E003E6708 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F8DB21948EF5E003E6708 /* AIUtilities.framework */; };
+		7740670E1948FB6200760085 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F8DB11948EF5E003E6708 /* Adium.framework */; };
+		7740670F1948FB6200760085 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F8DB21948EF5E003E6708 /* AIUtilities.framework */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				773F8DB31948EF5E003E6708 /* Adium.framework in Frameworks */,
-				773F8DB41948EF5E003E6708 /* AIUtilities.framework in Frameworks */,
+				7740670E1948FB6200760085 /* Adium.framework in Frameworks */,
+				7740670F1948FB6200760085 /* AIUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,11 +220,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(ADIUM)/build/Deployment",
-					"/Users/larrybolt/Downloads/youtubeadium-code-11-trunk",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -252,11 +248,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(ADIUM)/build/Deployment",
-					"/Users/larrybolt/Downloads/youtubeadium-code-11-trunk",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${PRODUCT_NAME}_Prefix.pch";
