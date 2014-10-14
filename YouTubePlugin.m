@@ -29,10 +29,10 @@
 
 @implementation YouTubePlugin {
 //	AIPreferencePane *YouTubePluginPrefs;
-
+//
 //	NSUInteger blockId;
 //	NSCharacterSet *videoIdChars;
-
+//
 //	NSString *blockHTML;
 //	NSString *ytThumbHTML;
 }
@@ -107,7 +107,11 @@
                               @"href=\"http://www.youtube.com/v/",
                               @"href=\"https://www.youtube.com/v/",
                               @"href=\"http://youtube.com/v/",
-                              @"href=\"https://youtube.com/v/"];
+                              @"href=\"https://youtube.com/v/",
+                              @"href=\"http://www.youtube.com/watch?feature=player_embedded&amp;v=",
+                              @"href=\"https://www.youtube.com/watch?feature=player_embedded&amp;v=",
+                              @"href=\"http://youtube.com/watch?feature=player_embedded&amp;v=",
+                              @"href=\"https://youtube.com/watch?feature=player_embedded&amp;v="];
     return _youtubeUrls;
 }
 
